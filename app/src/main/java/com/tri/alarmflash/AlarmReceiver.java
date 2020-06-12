@@ -70,7 +70,7 @@ public class AlarmReceiver extends BroadcastReceiver {
             camera.setParameters(params);
             isFlashOn = true;
         }
-
+        MainActivity.imgbulb.setImageResource(R.drawable.bulb_on);
     }
 
     private void turnOffFlash() {
@@ -80,6 +80,7 @@ public class AlarmReceiver extends BroadcastReceiver {
             camera.setParameters(params);
             isFlashOn = false;
         }
+        MainActivity.imgbulb.setImageResource(R.drawable.bulb_off);
     }
 /////////////////////////////////////////////////
     //camera api >= 21 (lollipop)
@@ -90,6 +91,7 @@ public class AlarmReceiver extends BroadcastReceiver {
             cameraManager.setTorchMode(cameraId, true);
         } catch (CameraAccessException e) {
         }
+        MainActivity.imgbulb.setImageResource(R.drawable.bulb_on);
     }
 
     @SuppressLint("NewApi")
@@ -99,6 +101,7 @@ public class AlarmReceiver extends BroadcastReceiver {
             cameraManager.setTorchMode(cameraId, false);
         } catch (CameraAccessException e) {
         }
+        MainActivity.imgbulb.setImageResource(R.drawable.bulb_off);
     }
 
     @SuppressLint("NewApi")

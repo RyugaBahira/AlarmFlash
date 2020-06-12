@@ -12,6 +12,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity
     public static boolean hasCameraFlash = false; //harus static biar close app ttp ada
     private final int CAMERA_REQUEST = 123;
     private ToggleButton togglebtn;
+    public static ImageView imgbulb;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         alarmTimePicker = (TimePicker) findViewById(R.id.timePicker);
+        imgbulb = (ImageView) findViewById(R.id.imgbulb);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         togglebtn = (ToggleButton) findViewById(R.id.toggleButton);
