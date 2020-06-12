@@ -7,9 +7,19 @@
 
     <TimePicker
         android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center_horizontal"
+        android:text="Set starting time for alarm flash and\nrepeat every minute"
+        android:textColor="@android:color/black" />
 
     <ImageView
         android:id="@+id/imgbulb"
@@ -34,15 +44,5 @@
         android:layout_gravity="center"
         android:text="stop"
         android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:gravity="center_horizontal"
-        android:text="Set starting time for alarm flash and\nrepeat every minute"
-        android:textColor="@android:color/black" />
 
 </LinearLayout>
